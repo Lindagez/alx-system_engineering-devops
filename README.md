@@ -1,1 +1,1 @@
-Task 0.Where am I?
+delete the directory my_first_directory
