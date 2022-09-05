@@ -1,1 +1,1 @@
-script that changes the working directory to the user’s home directory.
+delete the directory my_first_directory
