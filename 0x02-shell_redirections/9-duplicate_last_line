@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 #!/bin/bash
+=======
+<<<<<<< HEAD
+#!/bin/bash
+=======
+#!/bim/bash
+>>>>>>> 45af628925f78e12efdc50da85f7d3e0c940609b
+>>>>>>> 1536a7b0dea214878577f5528677fa2ad2e27740
 tail -n 1 iacta >> iacta
