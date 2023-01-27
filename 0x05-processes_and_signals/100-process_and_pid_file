@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+sudo touch /var/run/myscript.pid
+sudo chmod +x /var/run/myscript.pid
+echo $$ > /var/run/myscript.pid
+
+trap "echo I hate the kill command; sudo rm /var/run/myscript.pid" SIGTERM
+trap "echo Y U no love me?!" SIGINT
+trap "sudo rm /var/run/myscript.pid" SIGQUIT
+
+while ((1))
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
