@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Configures a new Ubuntu server with a custom HTTP header response
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+service nginx restart
