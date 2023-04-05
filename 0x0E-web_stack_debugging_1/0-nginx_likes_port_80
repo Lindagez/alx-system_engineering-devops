@@ -8,6 +8,5 @@ sudo apt install nginx -y
 sudo service start nginx
 sudo service enable nginx   # start on system boot
 #edit default configuration
-rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo service nginx restart
