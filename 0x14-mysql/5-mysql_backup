@@ -1,11 +1,4 @@
 #!/usr/bin/env bash
 # a script to generate a MySQL dump and creates a compressed archive from it
-
-# variables for date and file extension
-arch_name=$(date +"%d-%m-%Y").tar.gz
-
-# creating mysql dump
-mysqldump --all-databases -uroot -p"$1" > backup.sql
-
-# compressing it to archieved file
-tar -czvf "$arch_name" backup.sql
+mysqldump -uroot -p"$1" --all-databases > backup.sql
+tar -cvzf "$(date +%d-%m-%Y)".tar.gz backup.sql
