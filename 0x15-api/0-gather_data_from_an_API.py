@@ -26,3 +26,4 @@ if __name__ == '__main__':
     print(msg.format(emp_name, tasks_compl))
     for title in tasks_compl_title:
         print('\t {:s}'.format(title))
+
