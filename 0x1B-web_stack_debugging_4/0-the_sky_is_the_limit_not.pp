@@ -1,11 +1,8 @@
-# Fixing the number of failed requests to 0
-exec { 'fix--for-nginx':
-  command => 'sed -i "s/15/4096/" /etc/default/nginx',
-  path    => '/usr/local/bin/:/bin/'
+# fix the issue wiz nginx 
+exec { 'increase limit':
+  command => '/usr/bin/env sed -i s/15/50000/ /etc/default/nginx',
 } ->
-
-# Restart the Nginx
-exec { 'nginx-restart':
-  command => 'nginx restart',
-  path    => '/etc/init.d/'
+exec { 'restart nginx':
+  provider => shell,
+  command  => '/usr/bin/env service nginx restart'
 }
